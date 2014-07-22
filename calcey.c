@@ -3,9 +3,7 @@
 #include "math.h"
 
 void calc() {
-/* What I want this to do: read from input, place arguments seperated by spaces into seperate strings like argv[] does. 
-Assume every other argument is an operator. Calculate accordingly. 
-Dissadvantages: 5+4 would not be understood.*/
+/* This don't work.*/
 	char f;
 	while ((f=getchar()) != '\n' && f != EOF);
 	char equ[80];
