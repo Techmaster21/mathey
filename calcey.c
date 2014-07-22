@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "math.h"
+#include "mathey.h"
 
 void calc() {
 /* This don't work.*/
