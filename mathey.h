@@ -1,3 +1,3 @@
-bvoid help();
+void help();
 int matrix();
 int startagain();

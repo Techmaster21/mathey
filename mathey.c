@@ -9,11 +9,12 @@ int main() {
 	while (1) {
 		printf("math> ");
 		scanf("%s", &mode);
-		if (strcmp(mode,"calc") == 0)
-			while ((f=getchar() != '\n' && f != EOF); //Making stdin squeeky clean
+		if (strcmp(mode,"calc") == 0) {
+			while ((f=getchar()) != '\n' && f != EOF); //Making stdin squeeky clean
 			calc();
+		}
 		else if (strcmp(mode,"matrix") == 0) {
-			while ((f=getchar() != '\n' && f != EOF); //Making stdin squeeky clean
+			while ((f=getchar()) != '\n' && f != EOF); //Making stdin squeeky clean
 			printf("math>matrix>\n");
 			matrix();
 		}

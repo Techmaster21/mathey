@@ -3,7 +3,7 @@
 #include "mathey.h"
 
 void calc() {
-/* This don't work.*/
+/* This don't work.
 	char equ[80];
 	char *p;
 	int i = 0;
@@ -16,4 +16,5 @@ void calc() {
 		for();		
 	}
 	printf("%i", a[0]);
+*/
 }
