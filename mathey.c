@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "math.h"
+#include "mathey.h"
 
 int main() {
 	char mode[80]; //For storing the string the user enters as desired mode of operation.
