@@ -4,8 +4,6 @@
 
 void calc() {
 /* This don't work.*/
-	char f;
-	while ((f=getchar()) != '\n' && f != EOF);
 	char equ[80];
 	char *p;
 	int i = 0;
