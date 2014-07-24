@@ -9,6 +9,7 @@ fgets and sscanf), but until then, it works properly.
 1.02: Added basic error checking, improved input
 1.03: Fixed -0 issue by changing y=0 to y=i in rowreduce()(So that it wasn't unnecessarily dividing 0 by d)
 1.04: Rearranged code into a more logical order utilizing function declarations.
+1.05: Learned that only char arrays need a null terminator.
 
 TODO:
 Perhaps need to figure out how to remove excess input in stdin(Safely, cleanly, properly, and without performance 
@@ -27,10 +28,10 @@ int r, c;
 char restart;
 //prototyping and function declarations
 int startagain();
-int getnums(double x[r][c+1]);
-void rowreduce(double x[r][c+1]);
-void eschform(double x[r][c+1]);
-void printout(double x[r][c+1]);
+int getnums(double x[r][c]);
+void rowreduce(double x[r][c]);
+void eschform(double x[r][c]);
+void printout(double x[r][c]);
 
 int matrix() {
 	do 
@@ -53,7 +54,7 @@ int matrix() {
 		else
 			continue;
 	}
-	double x[r][c+1];
+	double x[r][c];
 		
 	if (getnums(x))
 	{
@@ -74,7 +75,7 @@ int matrix() {
 }
 
 //Takes input for numbers in matrix
-int getnums(double x[r][c+1]) {
+int getnums(double x[r][c]) {
 	double m, d = 1;
 	int y, z;
 	puts("Print matrix in standard form using tabs to seperate values\ne.g. for a 2x3 matrix, input:\n"
@@ -101,7 +102,7 @@ int getnums(double x[r][c+1]) {
 }
 
 //Row reduce the matrix
-void rowreduce(double x[r][c+1]) {
+void rowreduce(double x[r][c]) {
 	int n, y, i, z;
 	double d;
 	for(i = 0; i < r; i++) 
@@ -119,7 +120,7 @@ void rowreduce(double x[r][c+1]) {
 }
 
 //Transform row reduced form into reduced row eschelon form
-void eschform(double x[r][c+1]) {
+void eschform(double x[r][c]) {
 	int i, n, j = r-1;
 	for(i = c - 2; i >= 1; i--, j--) 
 	{
@@ -132,7 +133,7 @@ void eschform(double x[r][c+1]) {
 	}
 }
 
-void printout(double x[r][c+1]) {
+void printout(double x[r][c]) {
 	int y,z;
 	puts("Resulting Matrix:");
 /*	printf("⌈");
